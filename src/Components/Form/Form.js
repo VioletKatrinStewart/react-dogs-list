@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Form({ name, bio, age, image, breed, handleChange, handleSave }) {
   return (
-    <form>
+    <div className="form">
       <h2> Enter the details to add a dog </h2>
       <label>
         Name
@@ -61,6 +61,6 @@ export default function Form({ name, bio, age, image, breed, handleChange, handl
       </label>
 
       <button onClick={handleSave}>Submit</button>
-    </form>
+    </div>
   );
 }
