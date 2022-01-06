@@ -1,26 +1,66 @@
 import React from 'react';
 
-export default function Form() {
+export default function Form({ name, bio, age, image, breed, handleChange, handleSave }) {
   return (
     <form>
-      <label>Name
-        <input value={''} onClick={} type='text' placeholder='Name'/>
+      <h2> Enter the details to add a dog </h2>
+      <label>
+        Name
+        <input
+          value={name}
+          onChange={(e) => {
+            handleChange('name', e.target.value);
+          }}
+          type="text"
+          placeholder="Name"
+        />
       </label>
-      <label>Bio
-        <input value={''} onClick={} type='text' placeholder='Bio'/>
+      <label>
+        Bio
+        <input
+          value={bio}
+          onChange={(e) => {
+            handleChange('bio', e.target.value);
+          }}
+          type="text"
+          placeholder="Bio"
+        />
       </label>
-      <label>Age
-        <input value={''} onClick={} type='number' placeholder='Age'/>
+      <label>
+        Age
+        <input
+          value={age}
+          onChange={(e) => {
+            handleChange('age', e.target.value);
+          }}
+          type="number"
+          placeholder="Age"
+        />
       </label>
-      <label>Image
-        <input value={''} onClick={} type='text' placeholder='image'/>
+      <label>
+        Image
+        <input
+          value={image}
+          onChange={(e) => {
+            handleChange('image', e.target.value);
+          }}
+          type="text"
+          placeholder="image"
+        />
       </label>
-      <label>Breed
-        <input value={''} onClick={} type='text' placeholder='Breed'/>
+      <label>
+        Breed
+        <input
+          value={breed}
+          onChange={(e) => {
+            handleChange('breed', e.target.value);
+          }}
+          type="text"
+          placeholder="Breed"
+        />
       </label>
-      
 
-      <button>Submit</button>
+      <button onClick={handleSave}>Submit</button>
     </form>
   );
 }
