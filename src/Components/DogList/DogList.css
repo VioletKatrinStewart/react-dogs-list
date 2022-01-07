@@ -1,0 +1,12 @@
+.pinkdiv {
+  background-color: pink;
+  text-align: center;
+}
+
+.doglink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
