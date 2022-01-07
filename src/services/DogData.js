@@ -6,7 +6,7 @@ export async function getDogs() {
 }
 
 export async function getDog(id) {
-  let request = await client.from('dog-data').select('*').match({ id: id });
+  let request = await client.from('dog-data').select('*').match({ id }).single();
   return checkError(request);
 }
 
