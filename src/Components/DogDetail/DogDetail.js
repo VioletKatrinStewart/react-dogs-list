@@ -11,6 +11,8 @@ export default function DogDetail({ dog }) {
         {dog.age} . Here is a little bit about our furry friend: ...
         {dog.bio}
       </p>
+      <button>Edit</button>
+      <button>Delete this dog</button>
     </div>
   );
 }

@@ -31,7 +31,7 @@ export default function Admin() {
   }
 
   return (
-    <div>
+    <div className="admindiv">
       <Header></Header>
       <Form
         handleSave={handleSave}
