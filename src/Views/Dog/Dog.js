@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Header from '../../Components/Header/Header';
 import DogDetail from '../../Components/DogDetail/DogDetail';
 import { getDog } from '../../services/DogData';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import './Dog.css';
 
 export default function Dog() {
   const [dog, setDog] = useState([]);
@@ -16,15 +17,13 @@ export default function Dog() {
       setLoading(false);
     };
     getDetail();
-  }, []);
+  }, [id]);
   if (loading) return <h1>loading</h1>;
 
   return (
-    <div>
+    <div className="dogdiv">
       <Header />
-      <Link to={`dogs/${dog.id}`}>
-        <DogDetail dog={dog} />
-      </Link>
+      <DogDetail dog={dog} />
     </div>
   );
 }

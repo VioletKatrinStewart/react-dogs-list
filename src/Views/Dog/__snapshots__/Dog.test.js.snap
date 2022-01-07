@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render an individual dog 1`] = `
+<div>
+   
+  <div
+    class="dogdiv"
+  >
+    <header>
+      <a
+        href="/"
+      >
+        Home
+      </a>
+      <a
+        href="/admin"
+      >
+        Admin
+      </a>
+    </header>
+    <div
+      class="detaildiv"
+    >
+      <h1>
+         This is 
+        Stinky
+         
+      </h1>
+      <img
+        src="https://cdn.wallpapersafari.com/87/51/TkasJf.jpg"
+      />
+      <p>
+        Stinky
+         is a 
+        Golden Retriever 
+         who is
+         1 year old
+         . Here is a little bit about our furry friend: ...
+        Just a stinky little boy. 
+      </p>
+    </div>
+  </div>
+</div>
+`;
