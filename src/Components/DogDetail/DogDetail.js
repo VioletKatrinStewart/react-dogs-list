@@ -1,7 +1,7 @@
 import React from 'react';
 import './DogDetail.css';
 
-export default function DogDetail({ dog }) {
+export default function DogDetail({ dog, deleteButton }) {
   return (
     <div className="detaildiv">
       <h1> This is {dog.name} </h1>
@@ -11,8 +11,7 @@ export default function DogDetail({ dog }) {
         {dog.age} . Here is a little bit about our furry friend: ...
         {dog.bio}
       </p>
-      <button>Edit</button>
-      <button>Delete this dog</button>
+      <button onClick={deleteButton}>Delete</button>
     </div>
   );
 }

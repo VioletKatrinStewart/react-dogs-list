@@ -2,16 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Header from '../../Components/Header/Header';
 import Form from '../../Components/Form/Form';
 import { getDog, updateDog } from '../../services/DogData';
-import { deleteDog } from '../../services/DogData';
 import { useParams } from 'react-router';
-
-//ADD LINK ON DETAILDOG PAGE TO EDIT THAT DOG
-//edit/:id - similiar to how you link from dog to detail add to app js
-//SHOWS PREFILLED FORM FOR EDITING DOG
-//UPDATE BUTTON AND DELETE BUTTON
-//USE UPDATEDOG AND DELETE DOG FUNCTIONS
-//use use params and find by id function
-//use effect gets dog by id
+import { deleteDog } from '../../services/DogData';
 
 export default function Edit() {
   const [name, setName] = useState('');
@@ -51,10 +43,17 @@ export default function Edit() {
   async function handleSave(e) {
     e.preventDefault();
     const dog = { name: name, age: age, bio: bio, image: image, breed: breed };
-    await updateDog(dog);
+    await updateDog(dog, params.id);
+  }
+
+  async function handleDelete(e) {
+    e.preventDefault();
+    await deleteDog(params.id);
   }
 
   //CREATE HANDLE DELETE FUNCTION FOR DELETEDOG
+  //FIGURE OUT WHERE TO PUT DELETE BUTTON?
+  //CREATE LINKS FOR THE EDIT PAGE SO WHEN YOU CLICK EDIT ON DOG DETAIL IT TAKES YOU TO THIS
 
   return (
     <div>
@@ -62,14 +61,13 @@ export default function Edit() {
       <Form
         handleSave={handleSave}
         handleChange={handleChange}
+        handleDelete={handleDelete}
         name={name}
         bio={bio}
         age={age}
         image={image}
         breed={breed}
       ></Form>
-      <button>Delete</button>
-      <button>Update</button>
     </div>
   );
 }

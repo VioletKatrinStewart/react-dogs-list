@@ -11,9 +11,9 @@ function App() {
       <Switch>
         <Route path="/" exact component={Dogs} />
         <Route path="/dogs" exact component={Dogs} />
-        <Route path="/dogs/:id" component={Dog} />
-        <Route path="/admin" component={Admin} />
-        <Route path="/dogs/:id/edit" component={Edit} />
+        <Route path="/dogs/:id" exact component={Dog} />
+        <Route path="/admin" exact component={Admin} />
+        <Route path="/dogs/:id/edit" exact component={Edit} />
       </Switch>
     </BrowserRouter>
   );
