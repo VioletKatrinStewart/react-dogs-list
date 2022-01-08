@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render text in form 1`] = `
+<div>
+   
+  <div
+    class="admindiv"
+  >
+    <header>
+      <a
+        href="/"
+      >
+        Home
+      </a>
+      <a
+        aria-current="page"
+        class="active"
+        href="/admin"
+      >
+        Admin
+      </a>
+    </header>
+    <div
+      class="form"
+    >
+      <h2>
+         Enter the details to add a dog 
+      </h2>
+      <p />
+      <label>
+        Name
+        <input
+          placeholder="Name"
+          type="text"
+          value=""
+        />
+      </label>
+      <label>
+        Bio
+        <input
+          placeholder="Bio"
+          type="text"
+          value=""
+        />
+      </label>
+      <label>
+        Age
+        <input
+          placeholder="Age"
+          type="number"
+          value=""
+        />
+      </label>
+      <label>
+        Image
+        <input
+          placeholder="image"
+          type="text"
+          value=""
+        />
+      </label>
+      <label>
+        Breed
+        <input
+          placeholder="Breed"
+          type="text"
+          value=""
+        />
+      </label>
+      <button>
+        Submit
+      </button>
+    </div>
+  </div>
+</div>
+`;

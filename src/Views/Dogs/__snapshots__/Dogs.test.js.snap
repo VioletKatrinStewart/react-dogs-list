@@ -29,21 +29,31 @@ exports[`should render a list of dogs 1`] = `
     >
       These are the dogs we have available to adopt, click for more details!
     </h2>
-    <div>
+    <div
+      class="doglist"
+    >
       <a
         class="doglink"
-        href="/dogs/1"
+        href="/dogs/6"
       >
-        Stinky
+        <h3>
+           
+          Mittens 
+           
+        </h3>
         <img
-          src="https://cdn.wallpapersafari.com/87/51/TkasJf.jpg"
+          src="https://i.insider.com/5cdeb255021b4c06ca38bbb3?width=2000&format=jpeg&auto=webp"
         />
       </a>
       <a
         class="doglink"
         href="/dogs/2"
       >
-        Barky
+        <h3>
+           
+          Barky 
+           
+        </h3>
         <img
           src="https://cdn.kqed.org/wp-content/uploads/sites/39/2012/04/dog-nose-resize.jpg"
         />
@@ -52,7 +62,11 @@ exports[`should render a list of dogs 1`] = `
         class="doglink"
         href="/dogs/3"
       >
-        Cool Guy
+        <h3>
+           
+          Very Cool Guy
+           
+        </h3>
         <img
           src="https://ca-times.brightspotcdn.com/dims4/default/8139471/2147483647/strip/true/crop/2048x1365+0+0/resize/840x560!/format/webp/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F1b%2F88%2F35dff51d0ac0da0d1f63ae4647a3%2Fla-tr-road-trip-issue-photos-20160621-010"
         />

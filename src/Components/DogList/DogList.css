@@ -8,5 +8,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.doglist {
+  display: flex;
+  flex-direction: column;
   gap: 30px;
+}
+
+.doglist a {
+  color: white;
+  text-decoration: none;
 }

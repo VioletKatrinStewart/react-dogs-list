@@ -12,6 +12,7 @@ export default function Edit() {
   const [image, setImage] = useState('');
   const [breed, setBreed] = useState('');
   const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(true);
 
   const params = useParams();
   useEffect(() => {
@@ -23,6 +24,7 @@ export default function Edit() {
       setImage(resp.image);
       setAge(resp.age);
       setBreed(resp.breed);
+      setLoading(false);
     };
     fetchData();
   }, [params.id]);
@@ -56,10 +58,7 @@ export default function Edit() {
     e.preventDefault();
     await deleteDog(params.id);
   }
-
-  //CREATE HANDLE DELETE FUNCTION FOR DELETEDOG
-  //FIGURE OUT WHERE TO PUT DELETE BUTTON?
-  //CREATE LINKS FOR THE EDIT PAGE SO WHEN YOU CLICK EDIT ON DOG DETAIL IT TAKES YOU TO THIS
+  if (loading) return <h1>loading</h1>;
 
   return (
     <div>

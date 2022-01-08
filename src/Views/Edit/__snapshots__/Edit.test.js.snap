@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the dogs info in the form 1`] = `
+<div>
+  <div>
+    <header>
+      <a
+        href="/"
+      >
+        Home
+      </a>
+      <a
+        href="/admin"
+      >
+        Admin
+      </a>
+    </header>
+    <div
+      class="form"
+    >
+      <h2>
+         Enter the details to add a dog 
+      </h2>
+      <p />
+      <label>
+        Name
+        <input
+          placeholder="Name"
+          type="text"
+          value="Mittens "
+        />
+      </label>
+      <label>
+        Bio
+        <input
+          placeholder="Bio"
+          type="text"
+          value="I am not a dog, how did I get here?"
+        />
+      </label>
+      <label>
+        Age
+        <input
+          placeholder="Age"
+          type="number"
+          value=" 12"
+        />
+      </label>
+      <label>
+        Image
+        <input
+          placeholder="image"
+          type="text"
+          value="https://i.insider.com/5cdeb255021b4c06ca38bbb3?width=2000&format=jpeg&auto=webp"
+        />
+      </label>
+      <label>
+        Breed
+        <input
+          placeholder="Breed"
+          type="text"
+          value="Cat"
+        />
+      </label>
+      <button>
+        Submit
+      </button>
+    </div>
+  </div>
+</div>
+`;
