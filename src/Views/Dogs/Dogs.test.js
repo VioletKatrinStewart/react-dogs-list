@@ -8,6 +8,6 @@ it('should render a list of dogs', async () => {
       <DogList />
     </MemoryRouter>
   );
-  await screen.findByText('Stinky');
+  await screen.findByText('Mittens');
   expect(container).toMatchSnapshot();
 });

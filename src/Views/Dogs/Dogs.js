@@ -17,6 +17,7 @@ export default function Dogs() {
     getData();
   }, []);
   if (loading) return <h1>loading</h1>;
+
   return (
     <div className="pinkdiv">
       <Header />

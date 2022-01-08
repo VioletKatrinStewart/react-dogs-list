@@ -10,8 +10,8 @@ export async function getDog(id) {
   return checkError(request);
 }
 
-export async function updateDog(dog) {
-  let request = await client.from('dog-data').update(dog).eq('id, dog.id');
+export async function updateDog(dog, id) {
+  let request = await client.from('dog-data').update(dog).match({ id });
   return checkError(request);
 }
 

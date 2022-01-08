@@ -23,22 +23,31 @@ exports[`should render an individual dog 1`] = `
     >
       <h1>
          This is 
-        Stinky
+        Mittens 
          
       </h1>
+      <p />
       <img
-        src="https://cdn.wallpapersafari.com/87/51/TkasJf.jpg"
+        src="https://i.insider.com/5cdeb255021b4c06ca38bbb3?width=2000&format=jpeg&auto=webp"
       />
       <p>
-        Stinky
+        Mittens 
          is a 
-        Golden Retriever 
+        Cat
          who is
-         1 year old
+         12
          . Here is a little bit about our furry friend: ...
-        Just a stinky little boy. 
+        I am not a dog, how did I get here?
       </p>
+      <button>
+        Delete
+      </button>
     </div>
+    <a
+      href="/dogs/6/edit"
+    >
+      Edit
+    </a>
   </div>
 </div>
 `;

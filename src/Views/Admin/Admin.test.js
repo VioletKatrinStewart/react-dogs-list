@@ -1,16 +1,16 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter, Route } from 'react-router-dom';
-import DogDetail from './Dog';
+import Form from './Admin';
 
-it('should render an individual dog', async () => {
+it('should render text in form', async () => {
   const { container } = render(
-    <MemoryRouter initialEntries={['/dogs/6']}>
+    <MemoryRouter initialEntries={['/admin']}>
       {' '}
-      <Route path="/dogs/:id">
-        <DogDetail />
+      <Route path="/admin">
+        <Form />
       </Route>
     </MemoryRouter>
   );
-  await screen.findByText('This is Mittens');
+  await screen.findByText('Name');
   expect(container).toMatchSnapshot();
 });
