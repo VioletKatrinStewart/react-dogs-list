@@ -11,6 +11,7 @@ export default function Edit() {
   const [age, setAge] = useState('');
   const [image, setImage] = useState('');
   const [breed, setBreed] = useState('');
+  const [message, setMessage] = useState('');
 
   const params = useParams();
   useEffect(() => {
@@ -41,9 +42,14 @@ export default function Edit() {
   }
 
   async function handleSave(e) {
-    e.preventDefault();
-    const dog = { name: name, age: age, bio: bio, image: image, breed: breed };
-    await updateDog(dog, params.id);
+    try {
+      e.preventDefault();
+      const dog = { name: name, age: age, bio: bio, image: image, breed: breed };
+      await updateDog(dog, params.id);
+      setMessage('Edited');
+    } catch {
+      setMessage('Error');
+    }
   }
 
   async function handleDelete(e) {
@@ -59,6 +65,7 @@ export default function Edit() {
     <div>
       <Header></Header>
       <Form
+        message={message}
         handleSave={handleSave}
         handleChange={handleChange}
         handleDelete={handleDelete}

@@ -9,6 +9,7 @@ export default function Admin() {
   const [age, setAge] = useState('');
   const [image, setImage] = useState('');
   const [breed, setBreed] = useState('');
+  const [message, setMessage] = useState('');
 
   function handleChange(key, value) {
     if (key === 'name') {
@@ -25,15 +26,21 @@ export default function Admin() {
   }
 
   async function handleSave(e) {
-    e.preventDefault();
-    const dog = { name: name, age: age, bio: bio, image: image, breed: breed };
-    await insertDog(dog);
+    try {
+      e.preventDefault();
+      const dog = { name: name, age: age, bio: bio, image: image, breed: breed };
+      await insertDog(dog);
+      setMessage('Added');
+    } catch {
+      setMessage('Error');
+    }
   }
 
   return (
     <div className="admindiv">
       <Header></Header>
       <Form
+        message={message}
         handleSave={handleSave}
         handleChange={handleChange}
         name={name}

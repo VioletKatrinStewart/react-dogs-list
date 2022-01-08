@@ -1,9 +1,10 @@
 import React from 'react';
 
-export default function Form({ name, bio, age, image, breed, handleChange, handleSave }) {
+export default function Form({ name, bio, age, image, breed, handleChange, handleSave, message }) {
   return (
     <div className="form">
       <h2> Enter the details to add a dog </h2>
+      <p>{message}</p>
       <label>
         Name
         <input
